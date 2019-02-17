@@ -105,7 +105,8 @@ export CXX="g++ -I/usr/include/x86_64-linux-gnu/ruby-2.1.0 -I/usr/include/ruby-2
 
 if [ ${FETCH} = "yes" ]
 then
-	wget http://releases.rubini.us/rubinius-${RBX_VERSION}.tar.bz2 || die "Echec du téléchargement de Rubinius. Vérifiez votre connexion internet."
+	# works: https://github.com/rubinius/rubinius/releases/download/v2.2.8/rubinius-2.2.8.tar.bz2
+	wget https://github.com/rubinius/rubinius/releases/download/v${RBX_VERSION}/rubinius-${RBX_VERSION}.tar.bz2 || die "Echec du téléchargement de Rubinius. Vérifiez votre connexion internet."
 fi
 tar -xf rubinius-${RBX_VERSION}.tar.bz2
 cd rubinius-${RBX_VERSION}
